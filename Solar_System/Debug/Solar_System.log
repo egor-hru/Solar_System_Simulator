@@ -1,0 +1,6 @@
+﻿LINK : warning LNK4098: библиотека по умолчанию "MSVCRT" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
+soil.lib(image_DXT.obj) : warning LNK4099: "SOIL.pdb" PDB не найден с "soil.lib(image_DXT.obj)" или на "D:\Programming\cpp\AMC_Bridge\Solar_System\Debug\SOIL.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+soil.lib(image_helper.obj) : warning LNK4099: "SOIL.pdb" PDB не найден с "soil.lib(image_helper.obj)" или на "D:\Programming\cpp\AMC_Bridge\Solar_System\Debug\SOIL.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+soil.lib(SOIL.obj) : warning LNK4099: "SOIL.pdb" PDB не найден с "soil.lib(SOIL.obj)" или на "D:\Programming\cpp\AMC_Bridge\Solar_System\Debug\SOIL.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+soil.lib(stb_image_aug.obj) : warning LNK4099: "SOIL.pdb" PDB не найден с "soil.lib(stb_image_aug.obj)" или на "D:\Programming\cpp\AMC_Bridge\Solar_System\Debug\SOIL.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+  Solar_System.vcxproj -> D:\Programming\cpp\AMC_Bridge\Solar_System\Debug\Solar_System.exe
