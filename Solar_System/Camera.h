@@ -91,6 +91,9 @@ public:
     // Getters
     GLfloat getZoom() const { return Zoom; }
     glm::mat4 getViewMatrix() const;
+
+    // Setters
+    void setPosition(glm::vec3 position);
 private:
 
     // Calculates the front vector from the Camera's (updated) Eular Angles

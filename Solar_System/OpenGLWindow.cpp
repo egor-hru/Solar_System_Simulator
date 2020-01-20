@@ -32,6 +32,14 @@
 Camera camera;
 GLfloat lastX = 400, lastY = 300;
 bool firstMouse = true;
+enum Planets {
+	Mercury, Venus,  Earth,   
+	Moon,    Mars, 	 Jupiter, 
+	Saturn,  Uranus, Neptune,
+	Space
+};
+
+Planets PlanetViewe;
 
 // Keys buffer
 bool keys[1024];
@@ -86,7 +94,6 @@ bool OpenGLWindow::createWindow(int width, int height, std::string windowTitle, 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	//glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
-
 
 
 	this->width = width;
@@ -169,6 +176,27 @@ void OpenGLWindow::doMovement()
 		camera.processKeyboard(LEFT, deltaTime);
 	if (keys[GLFW_KEY_D])
 		camera.processKeyboard(RIGHT, deltaTime);
+
+	if (keys[GLFW_KEY_1])
+		PlanetViewe = Planets::Mercury;
+	if (keys[GLFW_KEY_2])
+		PlanetViewe = Planets::Venus;
+	if (keys[GLFW_KEY_3])
+		PlanetViewe = Planets::Earth;
+	if (keys[GLFW_KEY_4])
+		PlanetViewe = Planets::Moon;
+	if (keys[GLFW_KEY_5])
+		PlanetViewe = Planets::Mars;
+	if (keys[GLFW_KEY_6])
+		PlanetViewe = Planets::Jupiter;
+	if (keys[GLFW_KEY_7])
+		PlanetViewe = Planets::Saturn;
+	if (keys[GLFW_KEY_8])
+		PlanetViewe = Planets::Uranus;	
+	if (keys[GLFW_KEY_9])
+		PlanetViewe = Planets::Neptune;
+	if (keys[GLFW_KEY_0])
+		PlanetViewe = Planets::Space;
 }
 
 void OpenGLWindow::showFPS()
@@ -296,12 +324,47 @@ void OpenGLWindow::renderScene()
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+	glm::vec3 offset = glm::vec3(.5f, .5f, .5f);
+	switch (PlanetViewe)
+	{
+	case(Planets::Mercury):
+		camera.setPosition(mercury.getOrigin() + offset);
+		break;
+	case(Planets::Venus):
+		camera.setPosition(venus.getOrigin() + offset);
+		break;	
+	case(Planets::Earth):
+		camera.setPosition(earth.getOrigin() + offset);
+		break;	
+	case(Planets::Moon):
+		camera.setPosition(moon.getOrigin() + offset);
+		break;	
+	case(Planets::Mars):
+		camera.setPosition(mars.getOrigin() + offset);
+		break;
+	case(Planets::Jupiter):
+		camera.setPosition(jupiter.getOrigin() + offset);
+		break;
+	case(Planets::Saturn):
+		camera.setPosition(saturn.getOrigin() + offset);
+		break;
+	case(Planets::Uranus):
+		camera.setPosition(uranus.getOrigin() + offset);
+		break;
+	case(Planets::Neptune):
+		camera.setPosition(neptune.getOrigin() + offset);
+		break;
+	case(Planets::Space):
+	default:
+		break;
+	}
+
 	sunSheProg.useProgram();
 	GLint PVM_p = glGetUniformLocation(sunSheProg.getShaderProgramID(), "PVM");
 
 	// SKY BOX
 	glBindVertexArray(skyBox.getVAO());
-	glm::mat4 PVM = getProjectionMatrix() * camera.getViewMatrix();
+	glm::mat4 PVM = getProjectionMatrix();
 	glUniformMatrix4fv(PVM_p, 1, GL_FALSE, glm::value_ptr(PVM));
 	skyBoxTexture.useTexture();
 	skyBox.draw();
@@ -350,6 +413,7 @@ void OpenGLWindow::renderScene()
 	earth.draw();
 	glBindVertexArray(0);
 
+	// MOON
 	glBindVertexArray(moon.getVAO());
 	moon.addRotation(0.5f, 4, 300, earth.getOrigin());
 	PV = getProjectionMatrix() * camera.getViewMatrix();

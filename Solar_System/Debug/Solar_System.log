@@ -1,6 +1,24 @@
-﻿LINK : warning LNK4098: библиотека по умолчанию "MSVCRT" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
-soil.lib(image_DXT.obj) : warning LNK4099: "SOIL.pdb" PDB не найден с "soil.lib(image_DXT.obj)" или на "D:\Programming\cpp\AMC_Bridge\Solar_System\Debug\SOIL.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
-soil.lib(image_helper.obj) : warning LNK4099: "SOIL.pdb" PDB не найден с "soil.lib(image_helper.obj)" или на "D:\Programming\cpp\AMC_Bridge\Solar_System\Debug\SOIL.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
-soil.lib(SOIL.obj) : warning LNK4099: "SOIL.pdb" PDB не найден с "soil.lib(SOIL.obj)" или на "D:\Programming\cpp\AMC_Bridge\Solar_System\Debug\SOIL.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
-soil.lib(stb_image_aug.obj) : warning LNK4099: "SOIL.pdb" PDB не найден с "soil.lib(stb_image_aug.obj)" или на "D:\Programming\cpp\AMC_Bridge\Solar_System\Debug\SOIL.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+﻿  OpenGLWindow.cpp
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(58,21): warning C4305: аргумент: усечение из "double" в "float"
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(59,19): warning C4305: аргумент: усечение из "double" в "float"
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(60,19): warning C4305: аргумент: усечение из "double" в "float"
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(61,18): warning C4305: аргумент: усечение из "double" в "float"
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(62,17): warning C4305: аргумент: усечение из "double" в "float"
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(63,20): warning C4305: аргумент: усечение из "double" в "float"
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(64,20): warning C4305: аргумент: усечение из "double" в "float"
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(65,21): warning C4305: аргумент: усечение из "double" в "float"
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(66,22): warning C4305: аргумент: усечение из "double" в "float"
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(398,34): warning C4305: аргумент: усечение из "double" в "GLfloat"
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(408,34): warning C4305: аргумент: усечение из "double" в "GLfloat"
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(428,33): warning C4305: аргумент: усечение из "double" в "GLfloat"
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(438,36): warning C4305: аргумент: усечение из "double" в "GLfloat"
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(458,35): warning C4305: аргумент: усечение из "double" в "GLfloat"
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(501,24): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(519,11): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(520,11): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(524,18): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(525,18): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(527,10): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(528,10): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
+D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\OpenGLWindow.cpp(535,28): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
   Solar_System.vcxproj -> D:\Programming\cpp\AMC_Bridge\Solar_System\Debug\Solar_System.exe

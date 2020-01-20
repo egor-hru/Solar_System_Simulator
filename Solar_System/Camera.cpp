@@ -32,6 +32,11 @@ glm::mat4 Camera::getViewMatrix() const
     return glm::lookAt(this->Position, this->Position + this->Front, this->Up);
 }
 
+void Camera::setPosition(glm::vec3 position)
+{
+    Position = position;
+}
+
 void Camera::processKeyboard(Camera_Movement direction, GLfloat deltaTime)
 {
     GLfloat velocity = this->MovementSpeed * deltaTime;
