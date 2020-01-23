@@ -118,7 +118,7 @@ void Sphere::addRotation(GLfloat radius, GLfloat orbitalSpeed, GLfloat selfRotat
     modelMatrix = glm::translate(modelMatrix, point);
     modelMatrix = glm::translate(modelMatrix, glm::vec3(x, 0.0f, z));
     origin = glm::vec3(x + point.x, 0.0f, z + point.z);
-    //modelMatrix = glm::rotate(modelMatrix, glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.f));
+    modelMatrix = glm::rotate(modelMatrix, glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.f));
     modelMatrix = glm::rotate(modelMatrix, (GLfloat)glfwGetTime() * glm::radians(selfRotationSpeed), glm::vec3(0.0f, 0.0f, 1.f));
 }
 
