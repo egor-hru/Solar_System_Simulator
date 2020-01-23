@@ -18,10 +18,10 @@
 // Default values
 const glm::vec3 ORIGIN = { 0, 0, 0 };
 const float RADIUS = 1.0f;
-const unsigned int SECTOR_COUNT = 36; // 3
-const unsigned int STACK_COUNT = 18;  // 4
+const unsigned int SECTOR_COUNT = 256; // 3
+const unsigned int STACK_COUNT = 256;  // 4
 const float SELF_ROTATION_SPEED = 10.0f;
-const float ORBITAL_SPEED = 5.0f;
+const float ORBITAL_SPEED = 1.0f;
 
 class Sphere
 {

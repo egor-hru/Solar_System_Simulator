@@ -1,6 +1,6 @@
 // GLM Mathematics
-#include <glm/gtc/matrix_transform.hpp>
 #include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 // Other Includes
 #include "Sphere.h"
@@ -111,14 +111,14 @@ void Sphere::addRotation(GLfloat radius, GLfloat orbitalSpeed, GLfloat selfRotat
     this->orbitalSpeed = orbitalSpeed;
     this->selfRotationSpeed = selfRotationSpeed;
 
-    double x = sin(glfwGetTime() * orbitalSpeed) * radius * 1.5;
-    double z = cos(glfwGetTime() * orbitalSpeed) * radius * 1.5;
+    float x = sin(glfwGetTime() * orbitalSpeed / 5) * radius;
+    float z = cos(glfwGetTime() * orbitalSpeed / 5) * radius;
 
     modelMatrix = glm::mat4(1.0f);
     modelMatrix = glm::translate(modelMatrix, point);
     modelMatrix = glm::translate(modelMatrix, glm::vec3(x, 0.0f, z));
-    origin = glm::vec3(x, 0.0f, z);
-    modelMatrix = glm::rotate(modelMatrix, glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.f));
+    origin = glm::vec3(x + point.x, 0.0f, z + point.z);
+    //modelMatrix = glm::rotate(modelMatrix, glm::radians(-90.0f), glm::vec3(1.0f, 0.0f, 0.f));
     modelMatrix = glm::rotate(modelMatrix, (GLfloat)glfwGetTime() * glm::radians(selfRotationSpeed), glm::vec3(0.0f, 0.0f, 1.f));
 }
 

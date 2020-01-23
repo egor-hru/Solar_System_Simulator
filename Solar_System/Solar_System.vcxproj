@@ -94,6 +94,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>D:\Programming\cpp\External Libs\SOIL\lib\Win32\Debug;D:\Programming\cpp\External Libs\GLFW\lib-vc2019;D:\Programming\cpp\External Libs\GLEW\lib\Release\Win32;D:\Programming\cpp\External Libs\audiere\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;soil.lib;glew32.lib;glfw3.lib;audiere.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EmbedManagedResourceFile>glew32.dll;%(EmbedManagedResourceFile)</EmbedManagedResourceFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -109,6 +110,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>D:\Programming\cpp\External Libs\SOIL\lib\Win32\Debug;D:\Programming\cpp\External Libs\GLFW\lib-vc2019;D:\Programming\cpp\External Libs\GLEW\lib\Release\Win32;D:\Programming\cpp\External Libs\audiere\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;soil.lib;glew32.lib;glfw3.lib;audiere.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EmbedManagedResourceFile>glew32.dll;%(EmbedManagedResourceFile)</EmbedManagedResourceFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -128,6 +130,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>D:\Programming\cpp\External Libs\SOIL\lib\Win32\Debug;D:\Programming\cpp\External Libs\GLFW\lib-vc2019;D:\Programming\cpp\External Libs\GLEW\lib\Release\Win32;D:\Programming\cpp\External Libs\audiere\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;soil.lib;glew32.lib;glfw3.lib;audiere.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EmbedManagedResourceFile>glew32.dll;%(EmbedManagedResourceFile)</EmbedManagedResourceFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -147,6 +150,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>D:\Programming\cpp\External Libs\SOIL\lib\Win32\Debug;D:\Programming\cpp\External Libs\GLFW\lib-vc2019;D:\Programming\cpp\External Libs\GLEW\lib\Release\Win32;D:\Programming\cpp\External Libs\audiere\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;soil.lib;glew32.lib;glfw3.lib;audiere.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EmbedManagedResourceFile>glew32.dll;%(EmbedManagedResourceFile)</EmbedManagedResourceFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

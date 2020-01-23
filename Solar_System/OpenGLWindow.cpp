@@ -109,13 +109,14 @@ bool OpenGLWindow::createWindow(int width, int height, std::string windowTitle, 
 		if (vidMode != nullptr)
 		{
 			window = glfwCreateWindow(vidMode->width, vidMode->height, windowTitle.c_str(), monitor, nullptr);
-			glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 		}
 	}
 	else
 	{
 		this->window = glfwCreateWindow(width, height, windowTitle.c_str(), nullptr, nullptr);
 	}
+	
+
 
 	if (window == nullptr)
 	{
@@ -138,6 +139,7 @@ bool OpenGLWindow::createWindow(int width, int height, std::string windowTitle, 
 		return false;
 	}
 
+	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 	// Define the viewport dimensions
 	glfwGetFramebufferSize(window, &this->width, &this->height);
 	glViewport(0, 0, this->width, this->height);
@@ -324,7 +326,7 @@ void OpenGLWindow::renderScene()
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	glm::vec3 offset = glm::vec3(.5f, .5f, .5f);
+	glm::vec3 offset = glm::vec3(1.0f, 1.0f, 1.0f);
 	switch (PlanetViewe)
 	{
 	case(Planets::Mercury):
@@ -385,7 +387,7 @@ void OpenGLWindow::renderScene()
 
 	// MERCURY
 	glBindVertexArray(mercury.getVAO());
-	mercury.addRotation(2.0f, 1.0, 0);
+	mercury.addRotation(2.5f, 0.8, 25);
 	glm::mat4 PV = getProjectionMatrix() * camera.getViewMatrix();
 	glUniformMatrix4fv(PV_p, 1, GL_FALSE, glm::value_ptr(PV));
 	glUniformMatrix4fv(model_p, 1, GL_FALSE, glm::value_ptr(mercury.getModelMatrix()));
@@ -395,7 +397,7 @@ void OpenGLWindow::renderScene()
 
 	// VENUS
 	glBindVertexArray(venus.getVAO());
-	venus.addRotation(3.0f, 0.9, 280);
+	venus.addRotation(3.5f, 0.9, 28);
 	PV = getProjectionMatrix() * camera.getViewMatrix();
 	glUniformMatrix4fv(PV_p, 1, GL_FALSE, glm::value_ptr(PV));
 	glUniformMatrix4fv(model_p, 1, GL_FALSE, glm::value_ptr(venus.getModelMatrix()));
@@ -405,7 +407,7 @@ void OpenGLWindow::renderScene()
 
 	// EARTH
 	glBindVertexArray(earth.getVAO());
-	earth.addRotation(4.0f, 0.8, 300);
+	earth.addRotation(4.5f, 0.8, 30);
 	PV = getProjectionMatrix() * camera.getViewMatrix();
 	glUniformMatrix4fv(PV_p, 1, GL_FALSE, glm::value_ptr(PV));
 	glUniformMatrix4fv(model_p, 1, GL_FALSE, glm::value_ptr(earth.getModelMatrix()));
@@ -415,7 +417,7 @@ void OpenGLWindow::renderScene()
 
 	// MOON
 	glBindVertexArray(moon.getVAO());
-	moon.addRotation(0.5f, 4, 300, earth.getOrigin());
+	moon.addRotation(0.5f, 4, 30, earth.getOrigin());
 	PV = getProjectionMatrix() * camera.getViewMatrix();
 	glUniformMatrix4fv(PV_p, 1, GL_FALSE, glm::value_ptr(PV));
 	glUniformMatrix4fv(model_p, 1, GL_FALSE, glm::value_ptr(moon.getModelMatrix()));
@@ -425,7 +427,7 @@ void OpenGLWindow::renderScene()
 
 	// MARS
 	glBindVertexArray(mars.getVAO());
-	mars.addRotation(5.0f, 0.7, 340);
+	mars.addRotation(5.5f, 0.7, 34);
 	PV = getProjectionMatrix() * camera.getViewMatrix();
 	glUniformMatrix4fv(PV_p, 1, GL_FALSE, glm::value_ptr(PV));
 	glUniformMatrix4fv(model_p, 1, GL_FALSE, glm::value_ptr(mars.getModelMatrix()));
@@ -435,7 +437,7 @@ void OpenGLWindow::renderScene()
 
 	// JUPITER
 	glBindVertexArray(jupiter.getVAO());
-	jupiter.addRotation(6.5f, 0.6, 400);
+	jupiter.addRotation(7.0f, 0.6, 40);
 	PV = getProjectionMatrix() * camera.getViewMatrix();
 	glUniformMatrix4fv(PV_p, 1, GL_FALSE, glm::value_ptr(PV));
 	glUniformMatrix4fv(model_p, 1, GL_FALSE, glm::value_ptr(jupiter.getModelMatrix()));
@@ -445,7 +447,7 @@ void OpenGLWindow::renderScene()
 
 	// SATURN
 	glBindVertexArray(saturn.getVAO());
-	saturn.addRotation(7.5f, 0.5, 350);
+	saturn.addRotation(8.5f, 0.5, 35);
 	PV = getProjectionMatrix() * camera.getViewMatrix();
 	glUniformMatrix4fv(PV_p, 1, GL_FALSE, glm::value_ptr(PV));
 	glUniformMatrix4fv(model_p, 1, GL_FALSE, glm::value_ptr(saturn.getModelMatrix()));
@@ -455,7 +457,7 @@ void OpenGLWindow::renderScene()
 
 	// URANUS
 	glBindVertexArray(uranus.getVAO());
-	uranus.addRotation(8.5f, 0.7, 400);
+	uranus.addRotation(9.5f, 0.7, 40);
 	PV = getProjectionMatrix() * camera.getViewMatrix();
 	glUniformMatrix4fv(PV_p, 1, GL_FALSE, glm::value_ptr(PV));
 	glUniformMatrix4fv(model_p, 1, GL_FALSE, glm::value_ptr(uranus.getModelMatrix()));
@@ -465,7 +467,7 @@ void OpenGLWindow::renderScene()
 
 	// NEPTUNE
 	glBindVertexArray(neptune.getVAO());
-	neptune.addRotation(9.5f, 0.85f, 400);
+	neptune.addRotation(10.0f, 0.85f, 40);
 	PV = getProjectionMatrix() * camera.getViewMatrix();
 	glUniformMatrix4fv(PV_p, 1, GL_FALSE, glm::value_ptr(PV));
 	glUniformMatrix4fv(model_p, 1, GL_FALSE, glm::value_ptr(neptune.getModelMatrix()));
