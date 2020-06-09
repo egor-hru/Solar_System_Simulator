@@ -1,4 +1,0 @@
-﻿  Sphere.cpp
-D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\Sphere.cpp(114,13): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-D:\Programming\cpp\AMC_Bridge\Solar_System\Solar_System\Sphere.cpp(115,13): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-  Solar_System.vcxproj -> D:\Programming\cpp\AMC_Bridge\Solar_System\Debug\Solar_System.exe
