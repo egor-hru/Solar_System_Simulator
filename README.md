@@ -1,7 +1,7 @@
 # Solar System Simulator
  3D Solar System Simulator (using OpenGL & C++)
 
-## Screanshots
+## Screenshots
 ![Solar System Simulator](https://github.com/egor-hru/Solar_System_Simulator/blob/master/Screenshots/1.jpg)
 ![Solar System Simulator](https://github.com/egor-hru/Solar_System_Simulator/blob/master/Screenshots/2.jpg)
 ![Solar System Simulator](https://github.com/egor-hru/Solar_System_Simulator/blob/master/Screenshots/3.jpg)
