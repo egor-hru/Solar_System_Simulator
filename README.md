@@ -14,5 +14,5 @@
 * [audiere](http://audiere.sourceforge.net/) - Used to add music.
 * [SOIL](https://www.lonesock.net/soil.html) - Used to load textures.
 
-## Video presentasion
+## Video presentation
 * [YouTube](https://www.youtube.com/watch?v=hIZ3GZ-7HHc)
